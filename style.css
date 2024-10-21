@@ -7,6 +7,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.img-responsive {
+    width: 270px;
+    height: 270px;
+    margin: auto;
+}
+
 a,
 button {
     transition: all .3s ease-in-out;
