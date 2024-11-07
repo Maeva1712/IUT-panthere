@@ -140,7 +140,27 @@ button:hover {
     front-size: 14px;
     opacity: 1;
 }
-#lightbox
+#lightbox-modal .modal-dialog {
+    width: 90%;
+    max-width: 900px;
+}
+#lightbox-modal .modal-dialog img {
+    max-height: 90vh;
+    margin: 0 auto;
+}
+.lightbox-caption {
+    padding: 20px; 
+    color: #FFF;
+    background: rgba(0, 0, 0, .5);
+}
+.close-lightboxe {
+    color: #FFF;
+    front-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, .5);
+}
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
 .d-bloc a:hover .icon-sm,
