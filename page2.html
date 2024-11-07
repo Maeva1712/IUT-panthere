@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="Default">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="agence web Lyon,stratégie digitale, web design, création de site internet, illustrations sur-mesure, refonte de site web, Agence La Panthère ">
+    <meta name="description" content="L'agence La Panthère, spécialisée en web design, stratégie digitale et illustrations sur-mesure, accompagne les entreprises lyonnaises pour un succès en ligne durable.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="shortcut icon" type="image/png" href="favicon.jpg">
-    
+
+	</title>Agence La Panthère - Services de Web Design et Stratégie Digitale à Lyon</title>
+
+	<!-- CSS Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/et-line.min.css">
 	
-    
+	<!-- JavaScript -->
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
@@ -22,7 +25,6 @@
 
     
 <!-- Analytics -->
- 
 <!-- Analytics END -->
     
 </head>
@@ -30,26 +32,25 @@
 <!-- Principal conteneur -->
 <div class="page-container">
     
-<!-- bloc-0 -->
+<!-- bloc d'en-tête avec logo et navigation -->
 <div class="bloc bgc-white l-bloc " id="bloc-0">
 	<div class="container bloc-sm">
-		<nav class="navbar row">
+		<nav class="navbar row"> role="navigation" aria-label="Navigation principal">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="atlanta web design logo" height="40" /></a>
-				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				<a class="navbar-brand" href="index.html" aria-label="Acceuil - Agence La Panthère"> 
+					<img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère">
+				</a>
+				<button id="nav-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1"> aria-controls="navbar-1" aria-expanded="false" aria-label="Basculer la navigation">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
 			</div>
 			<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
 				<ul class="site-navigation nav navbar-nav">
-					<li>
-						<a href="index.html">Accueil</a>
-					</li>
-					<li>
-					</li>
-					<li>
-						<a href="page2.html">page2 &gt;</a>
-					</li>
+					<li><a href="index.html" aria-label="Page d'accueil">Acceuil</a></li>
+					</li><a href="page2.html" aria-label="Page 2 &gt;</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -62,11 +63,11 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1 class="text-center hero-bloc-text tc-white">
-					Parlons web design !
+				<h1 class="text-center hero-bloc-text tc-white" aria-label="Parlons web design">
+				   Parlons web design !
 				</h1>
-				<p class="text-center mg-lg tc-white tight-width-whitespace">
-					Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+				<p class="text-center mg-lg tc-white tight-width-whitespace" aria-label="Détails de la collaboration">
+				    Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
 					Parlez-nous de votre projet en complétant le formulaire ci-dessous.
 				</p>
 			</div>
@@ -80,38 +81,36 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
-				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!" aria-labelledby="form_title">
+				   <h2 id="form_title" class="sr-only">Formulaire de contact</h2>
 					<div class="form-group">
-						<label>
-							Nom
-						</label>
-						<input id="name" class="form-control" required />
+						<label for="name" aria-label="Nom">Nom</label>
+						<input id="name" class="form-control" required aria-required="true" />
 					</div>
 					<div class="form-group">
-						<label>
-							Adresse email
-						</label>
-						<input id="email" class="form-control" type="email" required />
+						<label for="email" aria-label="Adresse email">Adresse email</label>
+						<input id="email" class="form-control" type="email" required aria-required="true" />
 					</div>
 					<div class="form-group">
-						<label>
-							Comment nous avez-vous connu ?
-						</label>
-						<input class="form-control" type="email" required id="input_504" />
+						<label for="input_504" aria label="Comment nous avez vous connu ?"</label>
+						<input id="input_504" class="form-control" type="texte"required aria-required="true" />
 					</div>
 					<div class="form-group">
-						<label>
-							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						<label for="message" aria-label="Bried de votre projet">Bried de votre projet(Ajoutez autant de détails que nécessaire)</label>
+						<textarea id="mesage" class="form-control" row="4" cols="50" required aria-required="true"></textarea>
 					</div> 
-					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
+					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit"aria-label="Envoyer le formulaire">
 						Envoyer
 					</button>
 				</form>
 			</div>
 			<div class="col-sm-6">
 				<p>
-					contact@agencelapanthere.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
+			           </strong>Contactez-nous :</strong><br>
+				<a hred="mailto:contact@agencelapanthere.com" aria-label="Envoyer un email à contact@agencelapanthere.com">contact@agencelapanthere.com</a><br>
+				</strong>Adresse :</strong><br>
+				2 place Sathonay, 69001 Lyon<br>
+				</strong>Horaires :</strong><br>
 				</p>
 			</div>
 		</div>
@@ -120,7 +119,9 @@
 <!-- bloc-7 END -->
 
 <!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"aria-label="Retour en haut de la page">
+<span class="fa fa-chevron-up"></span>
+</a>
 <!-- ScrollToTop Button END-->
 
 
