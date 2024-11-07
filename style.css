@@ -1,15 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    background: #FFF;
+    background: #F8F9FA;
     overflow-x: hidden;
+    front-family: 'Roboto', sans-serif;
+    color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .img-responsive {
-    width: 270px;
-    height: 270px;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 
@@ -20,129 +22,125 @@ button {
 }
 
 a:hover {
+button:hover {
     text-decoration: none;
     cursor: pointer;
+    color: #007bff;
 }
 
 #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     width: 100%;
-    z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+    z-index: 1000;
+    background: #FFF url("img/pageload-spinner.gif") no-repeat center center;
+    height: 100vh;
 }
 
 .bloc {
     width: 100%;
-    clear: both;
-    background: 50% 50% no-repeat;
-    padding: 0 50px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: #ddd;
+    padding: 0 30px;
+    -background-size: cover;
     position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bloc .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 120px 60px;
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 120px 60px;
 }
 
 .bloc-md {
-    padding: 50px;
+    padding: 60px;
 }
 
 .bloc-sm {
-    padding: 20px 50px;
-}
-
-.bg-center,
-.bg-l-edge,
-.bg-r-edge,
-.bg-t-edge,
-.bg-b-edge,
-.bg-tl-edge,
-.bg-bl-edge,
-.bg-tr-edge,
-.bg-br-edge,
-.bg-repeat {
-    -webkit-background-size: auto!important;
-    -moz-background-size: auto!important;
-    -o-background-size: auto!important;
-    background-size: auto!important;
-}
-
-.bg-repeat {
-    background: repeat;
-}
-
-.bg-t-edge {
-    background: top no-repeat;
+    padding: 20px 30px;
 }
 
 .bloc-bg-texture::before {
     content: "";
-    background-size: 2px 2px;
+    background-size: 3px 3px;
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    background-image: url("img/texture-paper.png");
+    opacity: 0.15;
 }
-
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
-}
-
-.b-parallax {
-    background-attachment: fixed;
-}
-
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
 }
 
-.d-bloc button:hover {
-    color: rgba(255, 255, 255, .9);
+.d-bloc a {
+    color: #333;
 }
-
-.d-bloc .icon-round,
-.d-bloc .icon-square,
-.d-bloc .icon-rounded,
-.d-bloc .icon-semi-rounded-a,
-.d-bloc .icon-semi-rounded-b {
-    border-color: rgba(255, 255, 255, .9);
+.d-bloc .btn {
+    padding: 12px 25px;
+    backgrounf-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-
-.d-bloc .divider-h span {
-    border-color: rgba(255, 255, 255, .2);
+.d-bloc .a-btn:hover {
+    background-color: #0056b3;
 }
-
-.d-bloc .a-btn,
-.d-bloc .navbar a,
-.d-bloc .navbar-brand,
-.d-bloc a .icon-sm,
-.d-bloc a .icon-md,
-.d-bloc a .icon-lg,
-.d-bloc a .icon-xl,
-.d-bloc h1 a,
-.d-bloc h2 a,
-.d-bloc h3 a,
-.d-bloc h4 a,
-.d-bloc h5 a,
-.d-bloc h6 a,
-.d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+.navbar {
+    margin-bottom: 0;
+    z-index: 1000;
+    background-color: #343a40;
 }
-
-.d-bloc .a-btn:hover,
+.navbar-brand img {
+    max-height: 50px;
+    margin: 0;
+    display: inline;
+}
+.navbar .nav > li a:hover {
+    color: #007bff;
+ }
+.btn-d,
+.btn-d:hover {
+    color: #FFF;
+    background: rgba(0,0,0, .3);
+}
+.btn-rd {
+    border-radius: 40px; 
+}
+.btn-clean {
+    border: 1px solid rgba (0,0,0, .08);
+    box-shadow: 0 1px 3px rgba(0, 0, 1, .25);
+}
+.icon-md {
+    front-size: 30px;
+}
+.icon-lg {
+    front-size: 60px;
+}
+.scrollToTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    z-index: 500;
+    transition: all .3s ease-in-out;
+}
+.showScrollTop {
+    front-size: 14px;
+    opacity: 1;
+}
+#lightbox
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
 .d-bloc a:hover .icon-sm,
