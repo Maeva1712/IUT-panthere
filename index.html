@@ -257,6 +257,499 @@ body {
         <p>Nous offrons des services créatifs et sur mesure.</p>
         <!-- Bouton Contact supprimé -->
     </div>
+    <!doctype html>
+<html lang="fr">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Agence web Lyon, design web, stratégie digitale, création site web, SEO, illustrations, développement web sur-mesure">
+    <meta name="description" content="Agence La Panthère, experte en création de sites web et stratégie digitale à Lyon.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="language" content="fr">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <link rel="shortcut icon" href="favicon.jpg" type="image/png">
+
+    <!-- Préchargement des ressources -->
+    <link rel="preload" href="css/bootstrap.css" as="style">
+    <link rel="preload" href="js/jquery-2.1.0.js" as="script">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/et-line.css">
+
+    <title>Agence La Panthère - Agence web à Lyon</title>
+
+    <style>
+        /* Reset de marges et paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .bloc {
+            padding: 60px 0;
+        }
+
+        .bloc-lg {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        .tc-white {
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+    position: fixed; /* Position fixée pour qu'elle reste toujours visible en haut */
+    top: 0;          /* Place-la exactement en haut de la page */
+    left: 0;         /* Aligne la navbar avec le bord gauche */
+    width: 100%;     /* La navbar prend toute la largeur */
+    z-index: 100;    /* Assure que la navbar est toujours au-dessus de la bannière */
+    display: flex;   /* Affiche les éléments du menu sur une ligne */
+    justify-content: space-between; /* Aligne les éléments du menu de part et d'autre */
+    align-items: center; /* Centrer les éléments verticalement */
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc semi-transparent */
+    padding: 10px 30px; /* Espacement à l'intérieur de la navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel: ajoute une légère ombre au menu */
+}
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        /* Hero Section */
+      /* Hero Section ajustée pour le menu en haut */
+#bloc-1-hero {
+    position: relative; /* Permet de positionner la navbar par-dessus */
+    background: #2c3e50; /* Couleur bleue de la bannière */
+    padding: 50px 0; /* Ajuste l'espacement en haut pour compenser la navbar fixe */
+    color: #fff; /* Texte en blanc */
+    text-align: center; /* Centrage du texte */
+    background-image: url('img/hero-bg.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre toute la bannière */
+    background-position: center; /* Position de l'image */
+    z-index: 1; /* Assure que la bannière reste derrière la navbar */
+}
+
+#bloc-1-hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+/* Pas de marge supplémentaire entre le menu et la bannière */
+body {
+    margin: 0; /* Supprime toute marge par défaut */
+}
+        .cta-hero {
+            background-color: #e67e22;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-hero:hover {
+            background-color: #d35400;
+        }
+
+        /* Services Section */
+        #bloc-2-services {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .service-item h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .service-item span {
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        /* Portfolio Section */
+        #bloc-4-portfolio {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        .portfolio-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item h3 {
+            margin-top: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* CTA Section */
+        #bloc-3-what-i-do {
+            background-color: #e67e22;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        #bloc-3-what-i-do h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #bloc-3-what-i-do p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        .social a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+
+        <!-- Navbar -->
+<div class="bloc" id="bloc-0">
+    <div class="container">
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/agence-la-panthere-monochrome.svg" alt="Logo Agence La Panthère" height="40">
+            </a>
+            <div class="navbar-collapse">
+                <a href="index.html">Accueil</a>
+                <a href="page2.html">Contact</a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="panthere">
+    <div class="container">
+        <h1>Agence La Panthère</h1>
+        <p>Nous offrons des services créatifs et sur mesure.</p>
+        <!-- Bouton Contact supprimé -->
+    </div>
+</section>
+
+        <!-- Nos Services Section -->
+<div class="bloc bgc-white" id="bloc-2-services">
+    <div class="container bloc-md">
+        <!-- Titre de la section -->
+        <div class="row text-center" style="margin-bottom: 40px;">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Nos Services</h2> <!-- Titre ajouté -->
+            <p style="font-size: 1.8rem; color: #555;">Découvrez nos services web sur-mesure pour vous accompagner dans votre transformation digitale.</p> <!-- Sous-titre ajoutée -->
+        </div>
+        
+        <!-- Services Row -->
+        <div class="row voffset-lg">
+            <!-- Service 1: Web Design -->
+            <div class="col-sm-4 text-center">
+                <span class="et-icon-browser icon-dark-slate-blue icon-lg" style="font-size: 3rem;"></span> <!-- Réduction de la taille de l'icône -->
+                <h3 style="font-size: 2rem; margin-top: 20px;">Web Design</h3> <!-- Taille réduite -->
+                <p style="font-size: 1.7rem; line-height: 1.6; margin-top: 10px;">Création de designs esthétiques et fonctionnels adaptés à vos besoins spécifiques.</p> <!-- Taille réduite -->
+            </div>
+            <!-- Service 2: Stratégie Digitale -->
+            <div class="col-sm-4 text-center">
+                <span class="et-icon-presentation icon-dark-slate-blue icon-lg" style="font-size: 3rem;"></span> <!-- Réduction de la taille de l'icône -->
+                <h3 style="font-size: 2rem; margin-top: 20px;">Stratégie Digitale</h3> <!-- Taille réduite -->
+                <p style="font-size: 1.7rem; line-height: 1.6; margin-top: 10px;">Développement de stratégies digitales pour atteindre vos objectifs de visibilité et de conversion.</p> <!-- Taille réduite -->
+            </div>
+            <!-- Service 3: Illustrations -->
+            <div class="col-sm-4 text-center">
+                <span class="et-icon-pencil icon-dark-slate-blue icon-lg" style="font-size: 3rem;"></span> <!-- Réduction de la taille de l'icône -->
+                <h3 style="font-size: 2rem; margin-top: 20px;">Illustrations</h3> <!-- Taille réduite -->
+                <p style="font-size: 1.7rem; line-height: 1.6; margin-top: 10px;">Création d'illustrations sur-mesure pour enrichir vos projets et renforcer l'identité visuelle de votre marque.</p> <!-- Taille réduite -->
+            </div>
+        </div>
+    </div>
+</div>
+        
+       <!-- Avis Clients -->
+<div class="bloc" id="bloc-3-reviews" style="background-color: #AED6F1;">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 3rem; color: #333; margin-bottom: 40px;">Avis Clients</h2>
+        <div class="row">
+            <!-- Avis 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="quote">"L'équipe de l'agence La Panthère a transformé notre site web ! Ils ont vraiment compris nos besoins et le résultat est superbe. Un vrai plaisir de travailler avec eux."</p>
+                        <div class="stars">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 étoiles -->
+                        </div>
+                        <p class="client-name">Jean Dupont, Directeur Marketing</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Avis 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="quote">"Une équipe réactive et professionnelle. La stratégie digitale qu'ils nous ont proposée a boosté notre visibilité. Très satisfait de leur travail !" </p>
+                        <div class="stars">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- 4 étoiles -->
+                        </div>
+                        <p class="client-name">Sophie Martin, Fondatrice</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Avis 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="quote">"Un service de qualité et une écoute attentive à nos besoins. Leur expertise en design web a donné un vrai coup de boost à notre présence en ligne."</p>
+                        <div class="stars">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 étoiles -->
+                        </div>
+                        <p class="client-name">Marie Lefevre, Responsable Communication</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Présentation de l'agence -->
+<div class="bloc bgc-light-grey" id="bloc-1-agency-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="padding-left: 30px;"> <!-- Ajout du padding-left -->
+                <h2 class="text-center" style="font-size: 3rem; margin-bottom: 30px;">Agence La Panthère</h2>
+                <p class="text-justify" style="font-size: 1.9rem; line-height: 1.6; margin-bottom: 30px;">
+                    Nous sommes une agence web basée à Lyon, spécialisée dans la création de sites internet sur-mesure, le design web et la stratégie digitale. Notre équipe passionnée accompagne les entreprises locales pour les aider à se développer sur le web avec des solutions innovantes et efficaces. De la conception à la mise en ligne, nous créons des expériences uniques et optimisées pour offrir une visibilité maximale à vos projets.
+                </p>
+                <p class="text-justify" style="font-size: 1.9rem; line-height: 1.6; margin-bottom: 30px;">
+                    Que vous soyez une petite entreprise ou un professionnel cherchant à renforcer votre présence en ligne, nous avons la solution qui correspond à vos besoins. Notre approche est centrée sur la personnalisation, l'efficacité et l'innovation. Chaque projet que nous entreprenons est unique, et nous mettons tout en œuvre pour répondre aux exigences de nos clients avec des solutions sur-mesure.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="img/logo.png" alt="Logo Agence La Panthère" class="img-responsive center-block" style="width: 80%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Projets Réalisés</title>
+    <style>
+        /* Styles généraux pour le centrage */
+        .portfolio-item {
+            text-align: center;              /* Centre le texte */
+            margin-bottom: 30px;             /* Espace entre chaque projet */
+        }
+
+        .portfolio-item img {
+            width: 70%;                      /* Ajuste la largeur des images */
+            height: auto;                    /* Conserve le ratio des images */
+            border-radius: 8px;              /* Coins arrondis */
+            display: block;                  /* S'assure que l'image soit en bloc pour le centrage */
+            margin: 0 auto 10px;             /* Centre l'image et espace sous l'image */
+        }
+
+        /* Style pour l'espace sous le titre principal */
+        h2.text-center {
+            margin-bottom: 50px;             /* Ajoute un espace sous le titre */
+        }
+
+        /* Ajustement pour le texte */
+        .portfolio-item h3 {
+            margin-top: 10px;                /* Espace au-dessus du titre */
+            font-size: 1.25em;               /* Taille de police du titre */
+            font-weight: bold;
+        }
+
+        /* Description cadrée et limitée en largeur */
+        .portfolio-item p {
+            font-size: 1em;                  /* Taille de police de la description */
+            color: #555;                     /* Couleur pour le texte descriptif */
+            max-width: 80%;                  /* Limite la largeur des descriptions */
+            margin: 0 auto;                  /* Centre la description sous l'image */
+        }
+    </style>
+</head>
+<body>
+    
+        <!-- Portfolio Section -->
+<div class="bloc" id="bloc-4-portfolio">
+    <div class="container">
+        <h2 class="text-center">Nos Projets Réalisés</h2>
+        <div class="row">
+            <!-- Projet 1: Agence de Mariage (En haut à gauche) -->
+            <div class="col-md-6 portfolio-item">
+                <a href="img/4.webp" data-lightbox="portfolio" data-caption="Conception d'un site pour une agence de mariage">
+                    <img src="img/4.webp" alt="Conception d'un site pour une agence de mariage" class="img-responsive" style="max-width: 80%; height: auto; border-radius: 8px;">
+                </a>
+                <h3 class="text-center">Conception pour une Agence de Mariage</h3>
+                <p class="text-center">Création d'un site moderne et élégant pour une agence spécialisée dans l'organisation de mariages. Mise en avant des services et portfolio visuel.</p>
+            </div>
+
+            <!-- Projet 2: Site pour un Voyageur (En haut à droite) -->
+            <div class="col-md-6 portfolio-item">
+                <a href="img/3.webp" data-lightbox="portfolio" data-caption="Création d'un site internet pour un voyageur">
+                    <img src="img/3.webp" alt="Site internet pour un voyageur" class="img-responsive" style="max-width: 80%; height: auto; border-radius: 8px;">
+                </a>
+                <h3 class="text-center">Site Web pour un Voyageur</h3>
+                <p class="text-center">Développement d'un blog personnalisé pour partager des aventures de voyage. Le site intègre un système de galerie photo et un blog interactif.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Projet 3: Site pour un Journal Local (En bas à gauche) -->
+            <div class="col-md-6 portfolio-item">
+                <a href="img/1.webp" data-lightbox="portfolio" data-caption="Refonte d'un site pour un journal local">
+                    <img src="img/1.webp" alt="Refonte d'un site pour un journal local" class="img-responsive" style="max-width: 80%; height: auto; border-radius: 8px;">
+                </a>
+                <h3 class="text-center">Refonte pour un Journal Local</h3>
+                <p class="text-center">Mise à jour du site d'un journal local avec une interface plus moderne et responsive. Optimisation pour une meilleure expérience utilisateur sur mobile.</p>
+            </div>
+
+            <!-- Projet 4: Site pour un Photographe (En bas à droite) -->
+            <div class="col-md-6 portfolio-item">
+                <a href="img/2.webp" data-lightbox="portfolio" data-caption="Création d'un site web pour un photographe">
+                    <img src="img/2.webp" alt="Site web pour un photographe" class="img-responsive" style="max-width: 80%; height: auto; border-radius: 8px;">
+                </a>
+                <h3 class="text-center">Site Web pour un Photographe</h3>
+                <p class="text-center">Développement d'un site portfolio pour un photographe professionnel. Mise en avant de ses travaux avec une galerie photo interactive et un blog pour ses projets récents.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!-- Footer -->
+<footer class="bloc bgc-atomic-tangerine" id="bloc-8">
+    <div class="container bloc-sm">
+        <!-- Section des réseaux sociaux -->
+        <div class="row social text-center" style="margin-bottom: 30px;">
+            <div class="col-sm-3">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 30px; height: 30px; margin-right: 10px;">
+                    Facebook
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width: 30px; height: 30px; margin-right: 10px;">
+                    Instagram
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X (anciennement Twitter)" style="width: 30px; height: 30px; margin-right: 10px;">
+                    X
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Dribbble_logo.png" alt="Dribbble" style="width: 30px; height: 30px; margin-right: 10px;">
+                    Dribbble
+                </a>
+            </div>
+        </div>
+
+        <!-- Section des partenaires -->
+        <div class="row text-center" style="margin-bottom: 30px;">
+            <h4 style="font-size: 1.8rem; color: #fff; margin-bottom: 20px;">Nos Partenaires</h4>
+            <ul class="list-inline">
+                <li><a href="https://www.seo.fr" target="_blank" rel="noopener noreferrer" style="font-size: 1.6rem; color: #fff;">seo.fr</a></li>
+                <li><a href="https://www.lyon.fr" target="_blank" rel="noopener noreferrer" style="font-size: 1.6rem; color: #fff;">Lyon.fr</a></li>
+                <li><a href="https://www.ma-toiture.fr" target="_blank" rel="noopener noreferrer" style="font-size: 1.6rem; color: #fff;">ma-toiture.fr</a></li>
+            </ul>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row text-center">
+            <p class="text-white" style="font-size: 1.4rem;">&copy; 2024 Agence La Panthère - Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
 </section>
 
         <!-- Nos Services Section -->
