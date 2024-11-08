@@ -224,27 +224,39 @@
     <div class="page-container">
 
         <!-- Navbar -->
-        <div class="bloc" id="bloc-0">
-            <div class="container">
-                <nav class="navbar">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/agence-la-panthere-monochrome.svg" alt="Logo Agence La Panthère" height="40">
-                    </a>
-                    <div class="navbar-collapse">
-                        <a href="index.html">Accueil</a>
-                        <a href="page2.html">Contact</a>
-                    </div>
-                </nav>
+<div class="bloc bgc-white" id="bloc-0" style="margin-bottom: 0;">
+    <div class="container bloc-sm">
+        <nav class="navbar row" style="padding-bottom: 0; margin-bottom: 0;">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/agence-la-panthere-monochrome.svg" alt="Agence La Panthère Logo" height="40">
+                </a>
+                <button id="nav-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-        </div>
+            <div class="collapse navbar-collapse navbar-1">
+                <ul class="site-navigation nav navbar-nav">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="page2.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
 
-        <!-- Hero Section -->
-        <div class="bloc" id="bloc-1-hero">
-            <div class="container">
-                <h1>Agence La Panthère</h1>
-                <a href="page2.html" class="cta-hero" aria-label="Contactez-nous">Contact</a>
-            </div>
-        </div>
+<!-- Hero Section -->
+<div class="bloc bgc-dark-slate-blue bg-t-edge b-parallax" id="bloc-1-hero" style="margin-top: 0;">
+    <div class="container bloc-lg text-center" style="padding-top: 0; margin-top: 0;">
+        <img src="img/logo.png" class="center-block" width="100" alt="Agence La Panthère Logo" loading="lazy">
+        <h1 class="tc-white" style="margin-top: 0;">Agence La Panthère</h1>
+        <a href="page2.html" class="btn btn-lg btn-clean btn-rd cta-hero" aria-label="Contactez-nous">Contact</a>
+    </div>
+</div>
+
 
         <!-- Nos Services Section -->
 <div class="bloc bgc-white" id="bloc-2-services">
