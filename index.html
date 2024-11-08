@@ -250,14 +250,55 @@ body {
     </div>
 </div>
 
-<!-- Hero Section -->
-<section class="panthere">
-    <div class="container">
-        <h1>Agence La Panthère</h1>
-        <p>Nous offrons des services créatifs et sur mesure.</p>
-        <!-- Bouton Contact supprimé -->
-    </div>
-</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agence La Panthère</title>
+    <style>
+        /* Section Panthère */
+        .panthere {
+            background-image: url('path/to/your-image.jpg'); /* Remplace par le chemin de ton image de fond */
+            background-size: cover; /* Ajuste l'image de fond pour qu'elle couvre toute la section */
+            background-position: center; /* Centrer l'image de fond */
+            color: white; /* Couleur du texte en blanc */
+            text-align: center; /* Centrer le texte à l'intérieur de la section */
+            padding: 100px 0; /* Espacement vertical */
+        }
+
+        .panthere .container {
+            display: flex; /* Utiliser flexbox pour centrer le contenu */
+            flex-direction: column; /* Disposer les éléments (titre et texte) en colonne */
+            justify-content: center; /* Centrer verticalement le contenu */
+            align-items: center; /* Centrer horizontalement le contenu */
+            height: 100vh; /* Faire en sorte que la section prenne toute la hauteur de la fenêtre */
+        }
+
+        .panthere h1 {
+            font-size: 3rem; /* Taille du titre */
+            margin-bottom: 20px; /* Espacement sous le titre */
+        }
+
+        .panthere p {
+            font-size: 1.4rem; /* Taille de la description */
+            line-height: 1.6; /* Hauteur de ligne pour aérer la description */
+            margin: 0 auto; /* Centrer le texte et donner de l'espace autour */
+            max-width: 800px; /* Limiter la largeur de la description pour qu'elle ne soit pas trop large */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="panthere">
+        <div class="container">
+            <h1>Agence La Panthère</h1>
+            <p>Nous offrons des services créatifs et sur mesure.</p>
+            <!-- Bouton Contact supprimé -->
+        </div>
+    </section>
+
+</body>
+</html>
 
         <!-- Nos Services Section -->
 <div class="bloc bgc-white" id="bloc-2-services">
