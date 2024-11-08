@@ -283,7 +283,17 @@ body {
             line-height: 1.5; /* Hauteur de ligne pour aérer la description */
             margin: 0 auto; /* Centrer le texte et donner de l'espace autour */
             max-width: 600px; /* Limiter la largeur de la description pour qu'elle ne soit pas trop large */
-        }
+            
+        .panthere h1::before, .panthere p::before {
+    content: ''; /* Créer un pseudo-élément avant le texte */
+    position: absolute; /* Positionner sous le texte */
+    bottom: 0; /* Placer le surlignage en bas du texte */
+    left: 0;
+    width: 100%; /* La largeur du surlignage prend la largeur du texte */
+    height: 5px; /* Hauteur du surlignage */
+    background-color: white; /* Couleur du surlignage */
+    opacity: 0.6; /* Légèrement transparent pour un effet subtil */
+}
     </style>
 </head>
 <body>
