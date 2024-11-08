@@ -374,6 +374,11 @@ body {
             margin: 0 auto 10px;             /* Centre l'image et espace sous l'image */
         }
 
+        /* Style pour l'espace sous le titre principal */
+        h2.text-center {
+            margin-bottom: 40px;             /* Ajoute un espace sous le titre */
+        }
+
         /* Ajustement pour le texte */
         .portfolio-item h3 {
             margin-top: 10px;                /* Espace au-dessus du titre */
@@ -381,9 +386,12 @@ body {
             font-weight: bold;
         }
 
+        /* Description cadrée et limitée en largeur */
         .portfolio-item p {
             font-size: 1em;                  /* Taille de police de la description */
             color: #555;                     /* Couleur pour le texte descriptif */
+            max-width: 80%;                  /* Limite la largeur des descriptions */
+            margin: 0 auto;                  /* Centre la description sous l'image */
         }
     </style>
 </head>
