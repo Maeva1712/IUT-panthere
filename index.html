@@ -66,16 +66,16 @@
 
         /* Navbar */
         .navbar {
-             position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparence pour laisser voir le fond de la bannière */
-    padding: 15px 30px;
+    position: fixed; /* Position fixée pour qu'elle reste toujours visible en haut */
+    top: 0;          /* Place-la exactement en haut de la page */
+    left: 0;         /* Aligne la navbar avec le bord gauche */
+    width: 100%;     /* La navbar prend toute la largeur */
+    z-index: 100;    /* Assure que la navbar est toujours au-dessus de la bannière */
+    display: flex;   /* Affiche les éléments du menu sur une ligne */
+    justify-content: space-between; /* Aligne les éléments du menu de part et d'autre */
+    align-items: center; /* Centrer les éléments verticalement */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    padding: 15px 30px; /* Espacement à l'intérieur de la navbar */
 }
         
         .navbar a {
@@ -94,16 +94,17 @@
         }
 
         /* Hero Section */
-       #bloc-1-hero {
-    position: relative; /* Assurez-vous que la bannière peut avoir un contenu positionné dessus */
-    background: #2c3e50;
-    padding: 100px 0;
-    color: #fff;
-    text-align: center;
-    background-image: url('img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+      /* Hero Section ajustée pour le menu en haut */
+#bloc-1-hero {
+    position: relative; /* Permet de positionner la navbar par-dessus */
+    background: #2c3e50; /* Couleur bleue de la bannière */
+    padding: 80px 0; /* Ajuste l'espacement en haut pour compenser la navbar fixe */
+    color: #fff; /* Texte en blanc */
+    text-align: center; /* Centrage du texte */
+    background-image: url('img/hero-bg.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre toute la bannière */
+    background-position: center; /* Position de l'image */
+    z-index: 1; /* Assure que la bannière reste derrière la navbar */
 }
 
 #bloc-1-hero h1 {
@@ -111,11 +112,10 @@
     margin: 20px 0;
 }
 
-/* Pour que la section du menu ne cache pas le texte de la bannière */
+/* Pas de marge supplémentaire entre le menu et la bannière */
 body {
-    margin-top: 80px; /* Ajuster la marge pour tenir compte de la navbar */
+    margin: 0; /* Supprime toute marge par défaut */
 }
-
         .cta-hero {
             background-color: #e67e22;
             border-radius: 25px;
