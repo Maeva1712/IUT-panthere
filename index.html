@@ -1,148 +1,284 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Agence web Lyon, design web, stratégie digitale, création site web, SEO, illustrations, développement web sur-mesure">
-    <meta name="description" content="Agence La Panthère, basée à Lyon, experte en design web, stratégie digitale, illustrations et développement de sites web personnalisés pour entreprises locales.">
+    <meta name="description" content="Agence La Panthère, experte en création de sites web et stratégie digitale à Lyon.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="robots" content="index, follow">
-    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
-    <link rel="preload" href="css/style.css" as="style">
+    <meta name="language" content="fr">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <link rel="shortcut icon" href="favicon.jpg" type="image/png">
 
-    <!-- CSS Files (minified for better performance) -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/et-line.min.css">
+    <!-- Préchargement des ressources -->
+    <link rel="preload" href="css/bootstrap.css" as="style">
+    <link rel="preload" href="js/jquery-2.1.0.js" as="script">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/et-line.css">
 
     <title>Agence La Panthère - Agence web à Lyon</title>
+
+    <style>
+        /* Reset de marges et paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .bloc {
+            padding: 60px 0;
+        }
+
+        .bloc-lg {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        .tc-white {
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        /* Hero Section */
+        #bloc-1-hero {
+            background: #2c3e50;
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+            background-image: url('img/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #bloc-1-hero h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        .cta-hero {
+            background-color: #e67e22;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-hero:hover {
+            background-color: #d35400;
+        }
+
+        /* Services Section */
+        #bloc-2-services {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .service-item h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .service-item span {
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        /* Portfolio Section */
+        #bloc-4-portfolio {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        .portfolio-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item h3 {
+            margin-top: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* CTA Section */
+        #bloc-3-what-i-do {
+            background-color: #e67e22;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        #bloc-3-what-i-do h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #bloc-3-what-i-do p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        .social a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="page-container">
-    <!-- Navbar -->
-    <div class="bloc bgc-white" id="bloc-0">
-        <div class="container bloc-sm">
-            <nav class="navbar row" aria-label="Navigation principale">
-                <div class="navbar-header">
+    <div class="page-container">
+
+        <!-- Navbar -->
+        <div class="bloc" id="bloc-0">
+            <div class="container">
+                <nav class="navbar">
                     <a class="navbar-brand" href="index.html">
-                        <img src="img/agence-la-panthere-monochrome.svg" alt="Agence La Panthère Logo" height="40">
+                        <img src="img/agence-la-panthere-monochrome.svg" alt="Logo Agence La Panthère" height="40">
                     </a>
-                    <button id="nav-toggle" type="button" class="navbar-toggle" aria-label="Ouvrir le menu" aria-expanded="false" data-toggle="collapse" data-target=".navbar-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse navbar-1">
-                    <ul class="site-navigation nav navbar-nav">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page2.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="bloc bgc-dark-slate-blue bg-t-edge b-parallax" id="bloc-1-hero">
-        <div class="container bloc-lg text-center">
-            <img src="img/logo.webp" class="center-block" width="100" alt="Agence La Panthère Logo" loading="lazy">
-            <h1 class="tc-white">Agence La Panthère</h1>
-            <a href="page2.html" class="btn btn-lg btn-clean btn-rd cta-hero" aria-label="Contactez-nous">Contact</a>
-        </div>
-    </div>
-
-    <!-- Services Section -->
-    <div class="bloc bgc-white" id="bloc-2-services">
-        <div class="container bloc-md">
-            <div class="row text-center">
-                <img src="img/title.webp" alt="Nos Services - Agence Web à Lyon" class="img-responsive center-block" loading="lazy">
+                    <div class="navbar-collapse">
+                        <a href="index.html">Accueil</a>
+                        <a href="page2.html">Contact</a>
+                    </div>
+                </nav>
             </div>
-            <div class="row voffset-lg">
-                <div class="col-sm-4 text-center">
-                    <span class="et-icon-browser icon-dark-slate-blue icon-lg" aria-hidden="true"></span>
-                    <h3>Web Design</h3>
-                    <p>Nous créons des designs esthétiques et fonctionnels, adaptés à vos besoins.</p>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <span class="et-icon-presentation icon-dark-slate-blue icon-lg" aria-hidden="true"></span>
-                    <h3>Stratégie Digitale</h3>
-                    <p>Nous élaborons des stratégies digitales personnalisées pour atteindre vos objectifs.</p>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <span class="et-icon-pencil icon-dark-slate-blue icon-lg" aria-hidden="true"></span>
-                    <h3>Illustrations</h3>
-                    <p>Nos graphistes créent des illustrations sur-mesure pour enrichir vos projets web.</p>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="bloc" id="bloc-1-hero">
+            <div class="container">
+                <h1>Agence La Panthère</h1>
+                <a href="page2.html" class="cta-hero" aria-label="Contactez-nous">Contact</a>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="bloc" id="bloc-2-services">
+            <div class="container">
+                <h2 class="text-center">Nos Services</h2>
+                <div class="services-container">
+                    <div class="service-item">
+                        <span class="et-icon-browser"></span>
+                        <h3>Web Design</h3>
+                        <p>Création de designs esthétiques et fonctionnels.</p>
+                    </div>
+                    <div class="service-item">
+                        <span class="et-icon-presentation"></span>
+                        <h3>Stratégie Digitale</h3>
+                        <p>Stratégies digitales sur-mesure pour vos besoins.</p>
+                    </div>
+                    <div class="service-item">
+                        <span class="et-icon-pencil"></span>
+                        <h3>Illustrations</h3>
+                        <p>Illustrations créées pour enrichir vos projets web.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- CTA Section -->
-    <div class="bloc bgc-atomic-tangerine bg-presentation d-bloc bloc-bg-texture texture-paper b-parallax" id="bloc-3-what-i-do">
-        <div class="container bloc-lg text-center">
-            <h2 class="tc-white">Nous aidons les entreprises de Lyon à se développer et réussir.</h2>
-            <p>Collaborons pour créer des sites beaux et bien structurés, optimisés pour le SEO.<br><br>
-                <a href="page2.html" class="ltc-white bold-link">Contactez notre équipe</a>
-            </p>
-        </div>
-    </div>
-
-    <!-- Portfolio Section -->
-    <div class="bloc bgc-white bg-lines-h2-bg bg-repeat" id="bloc-4-portfolio">
-        <div class="container bloc-lg">
-            <div class="row text-center">
-                <h2>Projets Réalisés</h2>
-            </div>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-sm-6">
-                    <a href="img/4.webp" data-lightbox="img/4.webp" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage">
-                        <img src="img/4.webp" class="img-responsive portfolio-thumb" alt="Conception d'un site pour une agence de mariage" loading="lazy" width="500" height="400">
+        <!-- Portfolio Section -->
+        <div class="bloc" id="bloc-4-portfolio">
+            <div class="container">
+                <h2 class="text-center">Nos Projets Réalisés</h2>
+                <div class="portfolio-item">
+                    <a href="img/4.webp" data-lightbox="portfolio" data-caption="Conception d'un site pour une agence de mariage">
+                        <img src="img/4.webp" alt="Site pour une agence de mariage">
                     </a>
-                    <h3 class="text-center">Conception pour une agence de mariage</h3>
-                    <p class="text-center">Site internet présentant les prestations de l'agence de mariage.</p>
+                    <h3>Agence de Mariage</h3>
+                    <p>Site internet dédié à une agence de mariage.</p>
                 </div>
-                <!-- Project 2 -->
-                <div class="col-sm-6">
-                    <a href="img/1.webp" data-lightbox="img/1.webp" data-gallery-id="gallery-1" data-caption="Refonte d'un site pour un journal local">
-                        <img src="img/1.webp" class="img-responsive portfolio-thumb" alt="Refonte d'un site pour un journal local" loading="lazy" width="500" height="400">
-                    </a>
-                    <h3 class="text-center">Refonte pour un journal local</h3>
-                    <p class="text-center">Nouvelle identité visuelle pour un journal lyonnais.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Banner -->
-    <div class="bloc bgc-dark-slate-blue bg-banniere d-bloc bloc-bg-texture texture-paper" id="bloc-5-cta">
-        <div class="container bloc-lg text-center">
-            <h2 class="tc-white">Prêt à donner vie à votre projet ? Contactez notre équipe !</h2>
-            <a href="page2.html" class="btn btn-lg btn-clean btn-rd btn-cta" aria-label="Contactez notre équipe">Contact</a>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bloc bgc-atomic-tangerine" id="bloc-8">
-        <div class="container bloc-sm">
-            <p class="text-center white">Agence La Panthère - Agence web basée à Lyon.</p>
-            <div class="row social text-center">
-                <div class="col-sm-3"><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social"><span class="fa fa-twitter" aria-hidden="true"></span> Twitter</a></div>
-                <div class="col-sm-3"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social"><span class="fa fa-facebook" aria-hidden="true"></span> Facebook</a></div>
-                <div class="col-sm-3"><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social"><span class="fa fa-dribbble" aria-hidden="true"></span> Dribbble</a></div>
-                <div class="col-sm-3"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social"><span class="fa fa-instagram" aria-hidden="true"></span> Instagram</a></div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript Files (deferred loading for better performance) -->
-    <script src="js/jquery-2.1.0.min.js" defer></script>
-    <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/blocs.min.js" defer></script>
-    <script src="js/jquery.touchSwipe.min.js" defer></script>
-    <script src="js/gmaps.min.js" defer></script>
-</div>
-</body>
-</html>
+                <
