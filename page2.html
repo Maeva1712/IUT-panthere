@@ -22,34 +22,29 @@
     <script src="./js/formHandler.js"></script>
 </head>
 <body>
-<!-- Principal conteneur -->
-<div class="page-container">
-    
-<!-- bloc d'en-tête avec logo et navigation -->
-<div class="bloc bgc-white l-bloc " id="bloc-0">
-    <div class="container bloc-sm">
-        <nav class="navbar row" role="navigation" aria-label="Navigation principale">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html" aria-label="Accueil - Agence La Panthère"> 
-                    <img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère">
-                </a>
-                <button id="nav-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-1" aria-controls="navbar-1" aria-expanded="false" aria-label="Basculer la navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
-                <ul class="site-navigation nav navbar-nav">
-                    <li><a href="index.html" aria-label="Page d'accueil">Accueil</a></li>
-                    <li><a href="page2.html" aria-label="Page 2">Page 2</a></li>
+
+<!-- Menu de navigation identique à la page d'accueil -->
+<div class="bloc bgc-transparent l-bloc" id="menu-bloc">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" role="navigation" aria-label="Navigation principale">
+            <a class="navbar-brand" href="index.html" aria-label="Accueil - Agence La Panthère">
+                <img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère" style="height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page2.html" aria-label="Nos services">Nos services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 </div>
-<!-- bloc-0 END -->
+<!-- Menu de navigation END -->
 
 <!-- bloc-6 : Bannière avec surlignage blanc sous le texte pour la lisibilité -->
 <div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6">
@@ -161,7 +156,4 @@
         </div>
     </div>
 </div>
-<!-- Footer - bloc-8 END -->
-
-</div>
-<!-- Principal conteneur END -->
+<!-- Footer - bloc
