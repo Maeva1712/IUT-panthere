@@ -1,96 +1,251 @@
 <!doctype html>
 <html lang="fr">
+    
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="agence web Lyon,stratégie digitale, web design, création de site internet, illustrations sur-mesure, refonte de site web, Agence La Panthère">
-    <meta name="description" content="L'agence La Panthère, spécialisée en web design, stratégie digitale et illustrations sur-mesure, accompagne les entreprises lyonnaises pour un succès en ligne durable.">
+    <meta name="keywords" content="Agence web Lyon, design web, stratégie digitale, création site web, SEO, illustrations, développement web sur-mesure">
+    <meta name="description" content="Agence La Panthère, experte en création de sites web et stratégie digitale à Lyon.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/png" href="favicon.jpg">
-    <title>Agence La Panthère - Services de Web Design et Stratégie Digitale à Lyon</title>
-
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/et-line.min.css">
+    <meta name="language" content="fr">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
-    <!-- JavaScript -->
-    <script src="./js/jquery-2.1.0.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/blocs.min.js"></script>
-    <script src="./js/jqBootstrapValidation.js"></script>
-    <script src="./js/formHandler.js"></script>
+    <link rel="shortcut icon" href="favicon.jpg" type="image/png">
 
-    <!-- Custom Styles -->
+    <!-- Préchargement des ressources -->
+    <link rel="preload" href="css/bootstrap.css" as="style">
+    <link rel="preload" href="js/jquery-2.1.0.js" as="script">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/et-line.css">
+
+    <title>Agence La Panthère - Agence web à Lyon</title>
+
     <style>
-        /* Styles de la bannière de menu en blanc */
-        .navbar-container {
-            background-color: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Reset de marges et paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .navbar-container .navbar-brand img {
-            max-height: 50px;
-        }
-        .navbar-container .navbar-nav > li > a {
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
             color: #333;
-            font-weight: bold;
+        }
+
+        .bloc {
+            padding: 60px 0;
+        }
+
+        .bloc-lg {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        .tc-white {
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+    position: fixed; /* Position fixée pour qu'elle reste toujours visible en haut */
+    top: 0;          /* Place-la exactement en haut de la page */
+    left: 0;         /* Aligne la navbar avec le bord gauche */
+    width: 100%;     /* La navbar prend toute la largeur */
+    z-index: 100;    /* Assure que la navbar est toujours au-dessus de la bannière */
+    display: flex;   /* Affiche les éléments du menu sur une ligne */
+    justify-content: space-between; /* Aligne les éléments du menu de part et d'autre */
+    align-items: center; /* Centrer les éléments verticalement */
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc semi-transparent */
+    padding: 10px 30px; /* Espacement à l'intérieur de la navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel: ajoute une légère ombre au menu */
+}
+        .navbar a {
+            text-decoration: none;
+            color: #333;
             padding: 10px 15px;
         }
-        .navbar-container .navbar-nav > li > a:hover {
-            color: #f76c6c; /* Couleur personnalisée pour le hover */
+
+        .navbar a:hover {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        /* Hero Section */
+      /* Hero Section ajustée pour le menu en haut */
+#bloc-1-hero {
+    position: relative; /* Permet de positionner la navbar par-dessus */
+    background: #2c3e50; /* Couleur bleue de la bannière */
+    padding: 50px 0; /* Ajuste l'espacement en haut pour compenser la navbar fixe */
+    color: #fff; /* Texte en blanc */
+    text-align: center; /* Centrage du texte */
+    background-image: url('img/hero-bg.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre toute la bannière */
+    background-position: center; /* Position de l'image */
+    z-index: 1; /* Assure que la bannière reste derrière la navbar */
+}
+
+#bloc-1-hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+/* Pas de marge supplémentaire entre le menu et la bannière */
+body {
+    margin: 0; /* Supprime toute marge par défaut */
+}
+        .cta-hero {
+            background-color: #e67e22;
+            border-radius: 25px;
+            padding: 10px 30px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
             text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-hero:hover {
+            background-color: #d35400;
+        }
+
+        /* Services Section */
+        #bloc-2-services {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .service-item h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .service-item span {
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        /* Portfolio Section */
+        #bloc-4-portfolio {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        .portfolio-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item h3 {
+            margin-top: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* CTA Section */
+        #bloc-3-what-i-do {
+            background-color: #e67e22;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        #bloc-3-what-i-do h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #bloc-3-what-i-do p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        .social a {
+            margin: 0 10px;
         }
     </style>
 </head>
 
 <body>
-<!-- Principal conteneur -->
-<div class="page-container">
+    <div class="page-container">
 
-    <!-- Bannière de menu blanche avec logo et navigation -->
-    <div class="navbar-container">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html" aria-label="Accueil - Agence La Panthère">
-                    <img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" aria-label="Page d'accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="page2.html" aria-label="Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Bannière de menu END -->
-
-    <!-- Contenu de la page (exemple de bannière avec texte en surlignage) -->
-    <div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6">
-        <div class="container bloc-lg">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="text-center hero-bloc-text tc-white" aria-label="Parlons web design">
-                        <span class="highlight-text">Parlons web design !</span>
-                    </h1>
-                    <p class="text-center mg-lg tc-white tight-width-whitespace" aria-label="Détails de la collaboration">
-                        <span class="highlight-text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
-                        Parlez-nous de votre projet en complétant le formulaire ci-dessous.</span>
-                    </p>
-                </div>
+        <!-- Navbar -->
+<div class="bloc" id="bloc-0">
+    <div class="container">
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/agence-la-panthere-monochrome.svg" alt="Logo Agence La Panthère" height="40">
+            </a>
+            <div class="navbar-collapse">
+                <a href="index.html">Accueil</a>
+                <a href="page2.html">Contact</a>
             </div>
-        </div>
+        </nav>
     </div>
-
 </div>
-<!-- Principal conteneur END -->
-</body>
-</html>
