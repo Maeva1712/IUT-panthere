@@ -20,140 +20,77 @@
     <script src="./js/blocs.min.js"></script>
     <script src="./js/jqBootstrapValidation.js"></script>
     <script src="./js/formHandler.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Styles de la bannière de menu en blanc */
+        .navbar-container {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-container .navbar-brand img {
+            max-height: 50px;
+        }
+        .navbar-container .navbar-nav > li > a {
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+        .navbar-container .navbar-nav > li > a:hover {
+            color: #f76c6c; /* Couleur personnalisée pour le hover */
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
+<!-- Principal conteneur -->
+<div class="page-container">
 
-<!-- Menu de navigation identique à la page d'accueil -->
-<div class="bloc bgc-transparent l-bloc" id="menu-bloc">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light" role="navigation" aria-label="Navigation principale">
-            <a class="navbar-brand" href="index.html" aria-label="Accueil - Agence La Panthère">
-                <img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère" style="height: 60px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Basculer la navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" aria-label="Accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page2.html" aria-label="Nos services">Nos services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html" aria-label="Portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Menu de navigation END -->
-
-<!-- bloc-6 : Bannière avec surlignage blanc sous le texte pour la lisibilité -->
-<div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6">
-    <div class="container bloc-lg">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="text-center hero-bloc-text tc-white" aria-label="Parlons web design">
-                   <span class="highlight-text">Parlons web design !</span>
-                </h1>
-                <p class="text-center mg-lg tc-white tight-width-whitespace" aria-label="Détails de la collaboration">
-                    <span class="highlight-text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
-                    Parlez-nous de votre projet en complétant le formulaire ci-dessous.</span>
-                </p>
-            </div>
+    <!-- Bannière de menu blanche avec logo et navigation -->
+    <div class="navbar-container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html" aria-label="Accueil - Agence La Panthère">
+                    <img src="img/agence-la-panthere-monochrome.svg" alt="Logo de l'Agence La Panthère">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" aria-label="Page d'accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page2.html" aria-label="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
-</div>
-<!-- bloc-6 END -->
+    <!-- Bannière de menu END -->
 
-<!-- bloc-7 : Formulaire de contact -->
-<div class="bloc bgc-white l-bloc" id="bloc-7">
-    <div class="container bloc-lg">
-        <div class="row">
-            <div class="col-sm-6">
-                <form id="form_1" novalidate success-msg="Votre message a été envoyé." fail-msg="Désolé, il semble que notre serveur de messagerie ne répond pas, nous nous excusons pour le désagrément !" aria-labelledby="form_title">
-                   <h2 id="form_title" class="sr-only">Formulaire de contact</h2>
-                    <div class="form-group">
-                        <label for="name" aria-label="Nom">Nom</label>
-                        <input id="name" class="form-control" required aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email" aria-label="Adresse email">Adresse email</label>
-                        <input id="email" class="form-control" type="email" required aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label for="input_504" aria-label="Comment nous avez-vous connu ?">Comment nous avez-vous connu ?</label>
-                        <input id="input_504" class="form-control" type="text" required aria-required="true" />
-                    </div>
-                    <div class="form-group">
-                        <label for="message" aria-label="Brief de votre projet">Brief de votre projet (Ajoutez autant de détails que nécessaire)</label>
-                        <textarea id="message" class="form-control" rows="4" required aria-required="true"></textarea>
-                    </div> 
-                    <button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" aria-label="Envoyer le formulaire">
-                        Envoyer
-                    </button>
-                </form>
-            </div>
-            <div class="col-sm-6">
-                <p>
-                    <strong>Contactez-nous :</strong><br>
-                    <a href="mailto:contact@agencelapanthere.com" aria-label="Envoyer un email à contact@agencelapanthere.com">contact@agencelapanthere.com</a><br>
-                    <strong>Adresse :</strong><br>
-                    2 place Sathonay, 69001 Lyon<br>
-                    <strong>Horaires :</strong><br>
-                    Lundi - Vendredi : 9h00 - 18h00
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- bloc-7 END -->
-
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')" aria-label="Retour en haut de la page">
-    <span class="fa fa-chevron-up"></span>
-</a>
-<!-- ScrollToTop Button END -->
-
-<!-- Footer - bloc-8 -->
-<div class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
-    <div class="container bloc-sm">
-        <div class="row">
-            <div class="col-sm-12">
-                <p class="text-center white">
-                    Agence La Panthère - Agence web basée à Lyon.<br>
-                    &copy; 2024 Agence La Panthère. Tous les droits réservés.
-                </p>
-                <div class="row row-no-gutters social">
-                    <div class="col-sm-3">
-                        <div class="text-center">
-                            <a class="social" href="https://twitter.com" aria-label="Suivez-nous sur Twitter" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-twitter icon-md"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="text-center">
-                            <a class="social" href="https://facebook.com" aria-label="Suivez-nous sur Facebook" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-facebook icon-md"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="text-center">
-                            <a class="social" href="https://dribbble.com" aria-label="Suivez-nous sur Dribbble" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-dribbble icon-md"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="text-center">
-                            <a class="social" href="https://instagram.com" aria-label="Suivez-nous sur Instagram" target="_blank" rel="noopener noreferrer">
-                                <span class="fa fa-instagram icon-md"></span>
-                            </a>
-                        </div>
-                    </div>
+    <!-- Contenu de la page (exemple de bannière avec texte en surlignage) -->
+    <div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6">
+        <div class="container bloc-lg">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center hero-bloc-text tc-white" aria-label="Parlons web design">
+                        <span class="highlight-text">Parlons web design !</span>
+                    </h1>
+                    <p class="text-center mg-lg tc-white tight-width-whitespace" aria-label="Détails de la collaboration">
+                        <span class="highlight-text">Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+                        Parlez-nous de votre projet en complétant le formulaire ci-dessous.</span>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
-<!-- Footer - bloc
+<!-- Principal conteneur END -->
+</body>
+</html>
